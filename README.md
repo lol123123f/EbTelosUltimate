@@ -39,8 +39,6 @@ join our discord server to get help and share you ideas
 
 ## Badges
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![discord server](https://img.shields.io/badge/discord-join_today-purple)](https://discord.gg/4UrTm8q24g)
 [![last realse](https://img.shields.io/github/commits-since/lol123123f/EbTelosUltimate/latest/main)](https://github.com/lol123123f/EbTelosUltimate/releases)
