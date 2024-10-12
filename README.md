@@ -1,8 +1,9 @@
 
 # EbTelosUltimate
 
-EbTelosUltimate is a fabric mod for https://telosrealms.com server
-this mod allow you to do simple task that is not featured in the game
+EbTelosUltimate is a fabric mod for the https://telosrealms.com server. 
+
+This mod adds unique QOL tools and features not featured in the base game that are designed to elevate your experience of the server.
 
 
 
@@ -17,7 +18,10 @@ this mod allow you to do simple task that is not featured in the game
 
 #### Can I get banned?
 
-- No I check everything I add with the server owner so you should be fine, however we do not take responsibility if you get banned use on your own risk!
+- NO.
+
+    Every feature (present and future) in the mod is verified by the server staff before setting it public. However we do not take responsibility if you get banned while using the mod, so use it at your own risk!
+
 
 #### What version of mincraft the mod for?
 
@@ -31,7 +35,9 @@ you can download fabric using client like [curse-forge](https://www.curseforge.c
 
 
 ## Discord server
-join our discord server to get help and share you ideas
+Have some ideas for the mod? Found some bugs and glitches?
+
+join our discord server to get help and share you ideas!
 [Click here to join](https://discord.gg/4UrTm8q24g)
 
 ![Logo](https://www.telosrealms.com/img/logo-telos-realms.8ecebee2.png)
