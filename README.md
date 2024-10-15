@@ -1,7 +1,7 @@
 
 # EbTelosUltimate
 
-EbTelosUltimate is a fabric mod for the https://telosrealms.com server. 
+EbTelosUltimate is a fabric mod for the https://telosrealms.com server.
 
 This mod adds unique QOL tools and features not featured in the base game that are designed to elevate your experience of the server.
 
@@ -10,9 +10,9 @@ This mod adds unique QOL tools and features not featured in the base game that a
 
 ## features
 
- - /cv - shows you player inventory
- - ~/friends [add, remove, tp] - list of commands that make the game much easier and fun to play with friends~ (currenly reworking this feature as rolo the owner of Telos Realms asked me)
- 
+- /cv - shows you player inventory
+- /friends [add, remove, tp] - list of commands that make the game much easier and fun to play with friends~ (currenly reworking this feature as rolo the owner of Telos Realms asked me)
+
 
 ## FAQ
 
@@ -20,7 +20,7 @@ This mod adds unique QOL tools and features not featured in the base game that a
 
 - NO.
 
-    Every feature (present and future) in the mod is verified by the server staff before setting it public. However we do not take responsibility if you get banned while using the mod, so use it at your own risk!
+  Every feature (present and future) in the mod is verified by the server staff before setting it public. However we do not take responsibility if you get banned while using the mod, so use it at your own risk!
 
 
 #### What version of mincraft the mod for?
@@ -29,8 +29,8 @@ This mod adds unique QOL tools and features not featured in the base game that a
 
 #### What is Fabric?
 - Fabric is a mod client that lets you run mods that modify the game client and server side
-this mod however modify only client side as the server do not run this mod
-you can download fabric using client like [curse-forge](https://www.curseforge.com/minecraft) or just installing fabric from there [own site](https://fabricmc.net)
+  this mod however modify only client side as the server do not run this mod
+  you can download fabric using client like [curse-forge](https://www.curseforge.com/minecraft) or just installing fabric from there [own site](https://fabricmc.net)
 
 
 
@@ -52,22 +52,17 @@ join our discord server to get help and share you ideas!
 ## Commands
 
 #### Working
-| command name | parameter     | Description                |
-| :-------- | :------- | :------------------------- |
-| `cv` | `player name - string` | Shows you player inventory |
-
-#### reworking
-
-| Parameter | parameter     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `fl\friend\friend list`      | `no parameter` | shows you your friends list |
-| `friend add`      | `player name - string` | add friend to your friends list |
-| `friend remove`      | `player name - string` | remove friend from your friends list |
-| `friend tp`      | `player name - string` | **Must be in the hub to use it!** teleport you to the realm of the player and then teleports you to the player inside the realm|
+| command name            | parameter              | Description                          |
+|:------------------------|:-----------------------|:-------------------------------------|
+| `cv`                    | `player name - string` | Shows you player inventory           |
+| `fl\friend\friend list` | `no parameter`         | shows you your friends list          |
+| `friend add`            | `player name - string` | add friend to your friends list      |
+| `friend remove`         | `player name - string` | remove friend from your friends list |
+| `friend tp`             | `player name - string` | **Must be in the hub to use it!**    |
 
 #### Cooming
-| command name | parameter     | Description                |
-| :-------- | :------- | :------------------------- |
+| command name         | parameter      | Description                                                                                                                                                                                                                |
+|:---------------------|:---------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `auctionsellwithtax` | `no parameter` | will let you sell item in the ah and set the price of the item after taxs directly so if you do /auctionsellwithtax 1500 the price in the ah will be 1500 and not go up **You will still get less then the actuall price** |
 
 

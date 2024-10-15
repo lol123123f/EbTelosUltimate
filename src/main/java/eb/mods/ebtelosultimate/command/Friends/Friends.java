@@ -5,9 +5,12 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import eb.mods.ebtelosultimate.client.EbTelosUltimateClient;
+import eb.mods.ebtelosultimate.util.HelperColorText;
 import eb.mods.ebtelosultimate.util.fileManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.text.*;
@@ -48,15 +51,15 @@ public class Friends {
         ClientPlayerEntity player = context.getSource().getPlayer();
         List<String> friendsList = getFriendsList();
         if (friendsList == null) {
-            player.sendMessage(Text.literal("Error reading friends.txt").fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+            player.sendMessage(HelperColorText.colorText("{red}Error reading friends.txt"), false);
             return 0;
         }
-        if (friendsList.size() == 0) {
-            player.sendMessage(Text.literal("You have no friends!").fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
+        if (friendsList.isEmpty()) {
+            player.sendMessage(HelperColorText.colorText("{red}You have no friends!"), false);
             return 0;
         }
 
-        player.sendMessage(Text.literal("Checking friends... This may take a while").fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), false);
+        player.sendMessage(HelperColorText.colorText("{aqua}Checking friends... {yellow}This may take a while"), false);
 
         List<String> onlineFriends = new ArrayList<>();
         List<String> offlineFriends = new ArrayList<>();
@@ -97,32 +100,32 @@ public class Friends {
             MutableText friendsText = Text.empty();
 
             if (!onlineFriends.isEmpty()) {
-                friendsText.append(Text.literal("Online Friends:").fillStyle(Style.EMPTY.withColor(Formatting.DARK_GREEN)));
+                friendsText.append(HelperColorText.colorText("{dark_green}Online Friends:"));
                 int i = 1;
                 for (String onlineFriend : onlineFriends) {
-                    friendsText.append(Text.literal("\n" + i + ". " + onlineFriend).fillStyle(Style.EMPTY.withColor(Formatting.GREEN).withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/friends tp " + onlineFriend.split(" - ")[0])).withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal("Click to teleport to " + onlineFriend.split(" - ")[0])))));
+                    friendsText.append(HelperColorText.colorText("\n{aqua}" + i + ".{green} " + onlineFriend).fillStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/friends tp " + onlineFriend.split(" - ")[0])).withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal("Click to teleport to " + onlineFriend.split(" - ")[0])))));
                     i++;
                 }
             }
             if (!offlineFriends.isEmpty()) {
-                friendsText.append(Text.literal("\n\nOffline Friends:").fillStyle(Style.EMPTY.withColor(Formatting.RED)));
+                friendsText.append(HelperColorText.colorText("\n\n{red}Offline Friends:"));
                 int i = 1;
                 for (String offlineFriend : offlineFriends) {
                     String[] friendData = offlineFriend.split(":");
-                    friendsText.append(Text.literal("\n" + i + ". " + friendData[0]).fillStyle(Style.EMPTY.withColor(Formatting.DARK_RED).withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal(friendData[1])))));
+                    friendsText.append(HelperColorText.colorText("\n{aqua}" + i + ". {dark_red}" + friendData[0]).fillStyle(Style.EMPTY.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal(friendData[1])))));
                     i++;
                 }
             }
             if (!errorFriends.isEmpty()) {
-                friendsText.append(Text.literal("\n\nError Friends:").fillStyle(Style.EMPTY.withColor(Formatting.RED)));
+                friendsText.append(HelperColorText.colorText("\n\n{red}Error Friends:"));
                 int i = 1;
                 for (String errorFriend : errorFriends) {
-                    friendsText.append(Text.literal("\n" + i + ". " + errorFriend).fillStyle(Style.EMPTY.withColor(Formatting.DARK_RED)));
+                    friendsText.append(HelperColorText.colorText("\n{aqua}" + i + ". {dark_red}" + errorFriend));
                     i++;
                 }
             }
             if (friendsText.getString().isEmpty()) {
-                friendsText = Text.literal("You have no friends!").fillStyle(Style.EMPTY.withColor(Formatting.AQUA));
+                friendsText = HelperColorText.colorText("You have no friends!").fillStyle(Style.EMPTY.withColor(Formatting.AQUA));
             }
             player.sendMessage(friendsText);
         });
